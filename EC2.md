@@ -246,20 +246,22 @@ A load balancer distributes workloads/traffic across multiple compute resources 
 
 Operating at the request level (Application Layer i.e. 7th layer of OSI), Application Load Balancer provides advanced routing.
 
-Types of Load Balancers:
+>Types of Load Balancers:
+    
     a. Application Load Balancer
     b. Metwork Load Balancer
     c. Gateway Load Balancer
     d. Classic Load Balancer
 
-Types of load distribution schemes (Algorithms):
+>Types of load distribution schemes (Algorithms):
+
     a. Round Robin (Alternate distribution of traffic)
     b. Least Connections
     c. Least time (Server with least time of response)
     d. Over Flow
 
 
->## Difference between Application Load Balancer & Network Load Balancer
+## Difference between Application Load Balancer & Network Load Balancer
 
 | Sr No. | Application Load Balancer | Network Load Balancer |
 | --- | --- | --- |
@@ -271,13 +273,13 @@ Types of load distribution schemes (Algorithms):
 
 
 
->## EC2 Autoscaling
+## EC2 Autoscaling
 
-        Amazon EC2 Auto Scaling helps to ensure that the correct number of EC2 instances available to handle the load for the application.
+>Amazon EC2 Auto Scaling helps to ensure that the correct number of EC2 instances available to handle the load for the application.
 
-        There can be created collections of EC2 instances, called Auto Scaling Groups where the minimum & maximum number of instances can be specified in each group using scaling policy.
+>There can be created collections of EC2 instances, called Auto Scaling Groups where the minimum & maximum number of instances can be specified in each group using scaling policy.
 
-        Autoscaling enables elasticity by scaling horizontally through adding or terminating EC2 instances using the scaling policy.
+>Autoscaling enables elasticity by scaling horizontally through adding or terminating EC2 instances using the scaling policy.
 
 ### *Benefits of Autoscaling*
 ___
@@ -287,29 +289,29 @@ ___
 
 ### *Types of Autoscaling*
 ___
-    1. Autoscaling Groups
-        An autoscaling group contains a collection of Amazon EC2 instances that are treated as a logical groupping for the purpose of automatic scaling and management.
+1. ___`Autoscaling Groups`___
+>An autoscaling group contains a collection of Amazon EC2 instances that are treated as a logical groupping for the purpose of automatic scaling and management.
 
-        An autoscaling group also enables to use EC2 autoscaling features such as health check replacements and scaling policies. The automatic scaling and maintaining no. of instances in group is a core functionality.
+>An autoscaling group also enables to use EC2 autoscaling features such as health check replacements and scaling policies. The automatic scaling and maintaining no. of instances in group is a core functionality.
 
-        The size of Auto Scaling group depends upon the number of instances that we set as a desired capacity. Auto scaling group starts by launching enough instances to neet its desired capacity.
+>The size of Auto Scaling group depends upon the number of instances that we set as a desired capacity. Auto scaling group starts by launching enough instances to neet its desired capacity.
 
-        It maintains the desired number of instances by performing periodic health checks on instances in the group. If a instance becomes unhealthy, the group terminates it and launches another instance to replace it.
+>It maintains the desired number of instances by performing periodic health checks on instances in the group. If a instance becomes unhealthy, the group terminates it and launches another instance to replace it.
 
-        Types of Autoscaling Groups:
-            a. Static
-            b. Dynamic
-            c. Scheduled
-    
+Types of Autoscaling Groups:
+    a. Static
+    b. Dynamic
+    c. Scheduled
 
-    2. Launch Templates
 
-        A launch template is similar to a lauch configuration in that it specifies instance configuration information. It includes the id of AMI, the instance type, a key pair, security groups and the other parameters used to launch EC2 isntances.
+2. ___`Launch Templates`___
 
-        Defining a launch template instead of a launch configuration allows to have a multiple features and multiple versions of launch templates.
+>A launch template is similar to a lauch configuration in that it specifies instance configuration information. It includes the id of AMI, the instance type, a key pair, security groups and the other parameters used to launch EC2 isntances.
 
-        Key benefits of Launch Templates when used with Auto Scaling Groups:
-            
+>Defining a launch template instead of a launch configuration allows to have a multiple features and multiple versions of launch templates.
+
+Key benefits of Launch Templates when used with Auto Scaling Groups:
+       
     a. Support for multiple instance types and purchase options in a single Auto Scaling Group.
     b. Launching spot instances with capacity optimized allocation strategy.
     c. Support for unlimited mode for burstable performance instance.
@@ -358,36 +360,36 @@ ___
 
 ### Placement Groups
 
-    1. Cluster:
-        It is a logical grouping of instances within single AZ. It packs instances close together inside an AZ. It is used for low latency n/w performance.
+ 1. ***Cluster:***
+>It is a logical grouping of instances within single AZ. It packs instances close together inside an AZ. It is used for low latency n/w performance.
     
 ![Cluster](https://miro.medium.com/max/500/0*dL_izC8OkbvNvtNC.png)
 
-    2. Partition:
-        It spread instances across logical partitions such that groups of instance in one partition do not share the underlying h/w with groups of instances in other partitions.
+ 2. ***Partition:***
+>It spread instances across logical partitions such that groups of instance in one partition do not share the underlying h/w with groups of instances in other partitions.
 
 ![Partition](https://miro.medium.com/max/640/0*4KQ2NGzLfLa7Nh-r.png)
 
-    3. Spread:
-        It strictly places a small group of instances across distinct underlying h/w to reduce co-related failures.
+ 3. ***Spread:***
+>It strictly places a small group of instances across distinct underlying h/w to reduce co-related failures.
 
 ![Spread](https://miro.medium.com/max/720/0*Fy9htrG7a7ML7PQ_.png)
 
 
 ---
 
->### *EC2 Instance Tenancies*
+### *EC2 Instance Tenancies*
 
-        Tenancy defines how EC2 instances are distributed across physical hardware and affects pricing. There are three tenancy options available:
+Tenancy defines how EC2 instances are distributed across physical hardware and affects pricing. There are three tenancy options available:
     
-    1. Shared Tenancy (default):
-        Multiple AWS accounts may share the same physical hardware.
+   1. `Shared Tenancy (default)`:
+     >Multiple AWS accounts may share the same physical hardware.
 
-    2. Dedicated Instance (dedicated):
-        The instance in this tenancy runs on single-tenant hardware physically isolated at hardware level from other instances.
+   2. `Dedicated Instance (dedicated)`:
+     >The instance in this tenancy runs on single-tenant hardware physically isolated at hardware level from other instances.
 
-    3. Dedicated Host (host):
-        The instance run on a physical server with EC2 instance capacity fully dedicated to use, an isolated server with controlled configurations.
+   3. `Dedicated Host (host)`:
+     >The instance run on a physical server with EC2 instance capacity fully dedicated to use, an isolated server with controlled configurations.
 
 
 ---
