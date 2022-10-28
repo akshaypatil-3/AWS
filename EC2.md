@@ -24,7 +24,7 @@ Amazon EC2 is having two storage options i.e. `EBS & instance store`. Pre-config
 
 ## __Types of EC2 Instances__
 
-1. ___General Purpose:____
+1. ___General Purpose:___
 >General purpose instances provide a balance of compute, memory and networking resources and can be used for a wide range of workloads.
 Ex.: `M5, M5a, M5zn, M6g and M6a, M6i, Mac, T2, T3, T3a and T4g` instances.
 
