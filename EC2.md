@@ -38,18 +38,18 @@ Compute optimized type consist only C-series instances i.e. `C4, C5, C5n, C5a, C
 Features of Memory Optimized instances are real-time analytics, in-memory databases, memory intensive.
 It consists of `R` series, `X` series & `Z` series.
 
->___R Series:___ `R4, R5, R5a, R5b, R5n, R6i, R6g.`
+>>___R Series:___ `R4, R5, R5a, R5b, R5n, R6i, R6g.`
 - High performance Relational & NoSQL databases.
 - vCPU 2 to 96 & RAM 16-768 GB.
 - Storage EBS only & NVM SSD.
 
->___X Series:___ `X1, X1e, X2iezn, X2iedn, X2idn, X2gd`
+>>___X Series:___ `X1, X1e, X2iezn, X2iedn, X2idn, X2gd`
 - High performance database
 - Memory intensive enterprise application
 - In memory databases such as SAP, HANA.
 - vCPU 4 to 128, RAM 122 to 3904 GB.
 
->Z Series: `Z1d`
+>>Z Series: `Z1d`
 - High frequency, AWS Nitro System.
 
 4. ___Accelerated Computing:___
