@@ -383,13 +383,13 @@ Key benefits of Launch Templates when used with Auto Scaling Groups:
 Tenancy defines how EC2 instances are distributed across physical hardware and affects pricing. There are three tenancy options available:
     
    1. `Shared Tenancy (default)`:
-     >Multiple AWS accounts may share the same physical hardware.
+>Multiple AWS accounts may share the same physical hardware.
 
    2. `Dedicated Instance (dedicated)`:
-     >The instance in this tenancy runs on single-tenant hardware physically isolated at hardware level from other instances.
+>The instance in this tenancy runs on single-tenant hardware physically isolated at hardware level from other instances.
 
    3. `Dedicated Host (host)`:
-     >The instance run on a physical server with EC2 instance capacity fully dedicated to use, an isolated server with controlled configurations.
+>The instance run on a physical server with EC2 instance capacity fully dedicated to use, an isolated server with controlled configurations.
 
 
 ---
